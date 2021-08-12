@@ -3,17 +3,70 @@
 <html>  
 <head>
         <style> 
-                
+                body {
+                    display: flex;
+                    min-height: 100vh;
+                    flex-direction: column;
+                }
+                .container {
+                    flex: 1;
+                }
+
+                .navbar {
+                    overflow: hidden;
+                }
+
+                .navbar-list {
+                    display: inline;
+                    margin: 0.125rem 0.625rem;
+                    white-space: nowrap;
+                }
+
+                .navbar-list li :nth-last-child(2) {
+                    flex: 1;  
+                }
+                * {
+                    box-sizing: border-box;
+                    font-family: ’arial’, sans-serif;
+                    margin: 0; 
+                    padding: 0;
+                }
+                footer {
+                    background-color: rgb(181, 186, 189);
+                    color: rgb(215, 223, 223);
+                    line-height: 1.5;
+                }
+                footer a {
+                    text-decoration: none;
+                    color: rgb(144, 147, 148);
+                }
+                a:hover {
+                    text-decoration: underline;
+                }
                 ul {
                     list-style-type:none;
-                    margin: 0px;
                     padding: 0;
                 }
 
                 li {
                     display: inline;
                 }
-              
+                .footer-list {
+                    padding: 0.5375rem 1.875rem;
+                    background-color: rgb(238, 240, 240);
+                }
+                .footer-list {
+                    width: 100%;
+                    display: flex;
+                    flex-wrap: wrap;
+                }
+                .footer-list li {
+                    margin: 0.125rem 0.625rem;
+                    white-space: nowrap;
+                }
+                .footer-list li:nth-last-child(4) {
+                    flex: 1;       
+}
                 .img-container {
                     text-align:center;
                     margin:200px;
@@ -31,46 +84,43 @@
                 width: 600px;
                 height: 8px;  
                 }
-
-        
-
-
-                .footer {
-             
-                    position:absolute;
-                    bottom: 0;
-                  
-                      }
-                      
+              
         </style>
  </head>       
 <body>
-    <div>
-<ul>
-    <li><a>Search</a></li>
-    <li><a>Store</a></li>
-    <li style="float:right"><a>Gmail</a></li>
-    <li style="float:right"><a>Images</a></li>
-</ul>
-    <div class="img-container">
-    <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google logo" class="center"> 
-    
 
-    <div class="searchbar">
-        <input type="text" placeholder="">
-      </div> 
-
-</body>
-<footer>
-    <div class="footer">
-    <ul>
-        <li><a>Advertising</a></li>
-        <li><a>Business</a></li>
-        <li><a>How Search Works</a></li>
-        <li style="float:right"><a>Privacy</a></li>
-        <li style="float:right"><a>Terms</a></li>
-        <li style="float:right"><a>Settings</a></li>
+    <div class=navbar></div>
+    <ul class="navbar-list">
+        <li><a>Search</a></li>
+        <li><a>Store</a></li>
+        <li ><a>Gmail</a></li>
+        <li ><a>Images</a></li>
     </ul>
-    </div>
+        <div class="img-container">
+        <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google logo" class="center"> 
+        
+        
+        <div class="searchbar">
+            <input type="text" placeholder="">
+          </div> 
+          
+<div class="container"></div>
+   
+
+
+
+<footer>
+    
+    <ul class="footer-list">
+        <li><a href="#">Advertising</a></li>
+        <li><a href="#">Business</a></li>
+        <li><a href="#">How Search Works</a></li>
+        <li><a href="#">Carbon neutral since 2007</a></li>
+        <li><a href="#">Privacy</a></li>
+        <li><a href="#">Terms</a></li>
+        <li><a href="#">Settings</a></li>
+    </ul>
+
 </footer>
+</body>
 </html>
