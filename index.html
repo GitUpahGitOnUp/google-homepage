@@ -1,8 +1,23 @@
 <!DOCTYPE html>
-
-<html>  
-<head>
-        <style> 
+<html>
+<body>
+    <style>
+            
+                .navbar-list li {
+                    display:inline;
+                    margin: 0.125rem 0.625rem;
+                    white-space: nowrap;
+                }
+                .option {
+                    position: absolute;
+                    width: 180px;
+                    right: 0;
+                }
+                .option1 {
+                    position: absolute;
+                    width: 100px;
+                    right: 0;
+                }
                 body {
                     display: flex;
                     min-height: 100vh;
@@ -11,20 +26,32 @@
                 .container {
                     flex: 1;
                 }
-
-                .navbar {
-                    overflow: hidden;
+                .img-container {
+                    text-align: center;
                 }
 
-                .navbar-list {
-                    display: inline;
-                    margin: 0.125rem 0.625rem;
-                    white-space: nowrap;
+                .center {
+                    position: absolute;
+                    left: 50%;
+                    top: 30%;
+                    transform: translate(-50%, -50%);
+                    padding: 10px;
+                    }
+                
+                .searchbar input[type=text] {
+                position:absolute;
+                left: 34%;
+                top: 35%;
+                border: 1px;
+                margin-top: 8px;
+                font-size: 17px;
+                border-radius: 25px;
+                border: 1px solid #5f6164;
+                padding: 20px; 
+                width: 600px;
+                height: 8px;  
                 }
-
-                .navbar-list li :nth-last-child(2) {
-                    flex: 1;  
-                }
+              
                 * {
                     box-sizing: border-box;
                     font-family: ’arial’, sans-serif;
@@ -44,12 +71,7 @@
                     text-decoration: underline;
                 }
                 ul {
-                    list-style-type:none;
-                    padding: 0;
-                }
-
-                li {
-                    display: inline;
+                    list-style-type: none;
                 }
                 .footer-list {
                     padding: 0.5375rem 1.875rem;
@@ -67,48 +89,24 @@
                 .footer-list li:nth-last-child(4) {
                     flex: 1;       
 }
-                .img-container {
-                    text-align:center;
-                    margin:200px;
-                }
+    </style>
+</body>
+<div class=navbar></div>
+<ul class="navbar-list">
+    <li><a>Search</a></li>
+    <li><a>Store</a></li>
+    <li><a class="option">Gmail</a></li>
+    <li><a class="option1">Images</a></li>
+</ul>
+<div class=container></div>
 
-                .searchbar input[type=text] {
-                float: center;
-                padding: 6px;
-                border: 1px;
-                margin-top: 8px;
-                font-size: 17px;
-                border-radius: 25px;
-                border: 1px solid #5f6164;
-                padding: 20px; 
-                width: 600px;
-                height: 8px;  
-                }
-              
-        </style>
- </head>       
-<body>
-
-    <div class=navbar></div>
-    <ul class="navbar-list">
-        <li><a>Search</a></li>
-        <li><a>Store</a></li>
-        <li ><a>Gmail</a></li>
-        <li ><a>Images</a></li>
-    </ul>
-        <div class="img-container">
-        <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google logo" class="center"> 
-        
-        
-        <div class="searchbar">
-            <input type="text" placeholder="">
-          </div> 
-          
-<div class="container"></div>
-   
-
-
-
+<div class="img-container">
+    <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google logo" class="center"> 
+    
+<div class="searchbar">
+        <input type="text" placeholder="">
+      </div> 
+    
 <footer>
     
     <ul class="footer-list">
@@ -122,5 +120,4 @@
     </ul>
 
 </footer>
-</body>
 </html>
